@@ -230,15 +230,22 @@ function endGame() {
 pauseButton.addEventListener('click', togglePause);
 
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && gameRunning) {
+    const key = e.key.toLowerCase();
+    
+    if (key === 'escape' && gameRunning) {
         togglePause();
     }
     
-    keysPressed[e.key.toLowerCase()] = true;
+    keysPressed[key] = true;
     
     if (e.code === 'Space' && gameRunning && !paused) {
         fireBullet();
     }
+});
+
+document.addEventListener('keyup', (e) => {
+    const key = e.key.toLowerCase();
+    keysPressed[key] = false;
 });
 
 
