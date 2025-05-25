@@ -45,7 +45,7 @@ let enemySpawnTimer;
 let enemies = [];
 let bullets = [];
 let powerups = [];
-let keysPressed = {};
+window.keysPressed = {};
 let lastFired = 0;
 let fireRate = 300;
 let playerInvincible = false;
