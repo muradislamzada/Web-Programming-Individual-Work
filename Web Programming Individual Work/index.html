@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tank Battle Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div id="game-start" class="game-overlay">
+            <h1>Tank Battle</h1>
+            <button id="start-button">Oyuna Başla</button>
+            <div class="instructions">
+                <p>İdarəetmə:</p>
+                <ul>
+                    <li>W - İrəli</li>
+                    <li>S - Geri</li>
+                    <li>A - Sola dön</li>
+                    <li>D - Sağa dön</li>
+                    <li>Boşluq - Atəş</li>
+                    <li>Mouse Click - Atəş</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="game-over" class="game-overlay hidden">
+            <h1>Oyun Bitdi!</h1>
+            <div id="final-score">Xal: 0</div>
+            <button id="restart-button">Yenidən Oyna</button>
+        </div>
+        
+        <div id="hud">
+            <div id="score">Xal: 0</div>
+            <div id="health">Can: 100</div>
+            <div id="level">Səviyyə: 1</div>
+            <button id="pause-button">PAUSE</button> 
+        </div>
+        
+        <div id="player" class="tank"></div>
+        <div id="bullet-container"></div>
+        <div id="enemy-container"></div>
+        <div id="explosion-container"></div>
+        <div id="powerup-container"></div>
+        
+        <div id="controls-mobile" class="hidden">
+            <button id="btn-up">↑</button>
+            <button id="btn-down">↓</button>
+            <button id="btn-left">←</button>
+            <button id="btn-right">→</button>
+            <button id="btn-fire">Atəş</button>
+        </div>
+    </div>
+    
+    <script src="script1.js"></script>
+    <script src="script2.js"></script>
+</body>
+</html>
