@@ -289,7 +289,7 @@ document.addEventListener('keyup', (e) => {
 });
 
 function handlePlayerMovement() {
-    if (keysPressed['w'] || keysPressed['ц'] || keysPressed['arrowup']) {
+    if (keysPressed['w'] || keysPressed['arrowup']) {
         const moveX = Math.cos(degToRad(playerRotation)) * playerSpeed;
         const moveY = Math.sin(degToRad(playerRotation)) * playerSpeed;
         
@@ -297,7 +297,7 @@ function handlePlayerMovement() {
         playerY += moveY;
     }
     
-    if (keysPressed['s'] || keysPressed['ы'] || keysPressed['arrowdown']) {
+    if (keysPressed['s'] || keysPressed['arrowdown']) {
         const moveX = Math.cos(degToRad(playerRotation)) * playerSpeed;
         const moveY = Math.sin(degToRad(playerRotation)) * playerSpeed;
         
@@ -305,11 +305,11 @@ function handlePlayerMovement() {
         playerY -= moveY;
     }
     
-    if (keysPressed['a'] || keysPressed['ф'] || keysPressed['arrowleft']) {
+    if (keysPressed['a'] || keysPressed['arrowleft']) {
         playerRotation -= PLAYER_ROTATION_SPEED;
     }
     
-    if (keysPressed['d'] || keysPressed['в'] || keysPressed['arrowright']) {
+    if (keysPressed['d'] || keysPressed['arrowright']) {
         playerRotation += PLAYER_ROTATION_SPEED;
     }
     
